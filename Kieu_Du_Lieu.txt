@@ -1,0 +1,61 @@
+1. Sự khác biệt giữa các kiểu dữ liệu trong JavaScript?
+
+Trong JavaScript các kiểu dữ liệu được chia làm hai loại là kiểu nguyên thuỷ và đối tượng. Để biết kiểu dữ liệu của các biến JavaScript, ta có thể sử dụng typeof.
+Kiểu nguyên thuỷ
+
+String - biểu diễn một mảng ký tự hay một chuỗi. Kiểu chuỗi trong javascript có thể sử dụng một cặp dấu ngoặc kép hoặc dấu ngoặc kép đơn.
+
+ var str = "Vivek Singh Bisht"; //sử dụng dấu ngoặc kép
+ var str2 = 'John Doe'; // sử dụng dấu ngoặc đơn
+
+Number - biểu diễn cả số nguyên và số thực.
+
+var x = 3; // số nguyên
+var y = 3.6; // số thực
+
+BigInt - kiểu dữ liệu này được sử dụng để lưu trữ các số vượt quá giới hạn của kiểu dữ liệu Number. Nó có thể lưu trữ các số nguyên lớn và được biểu diễn bằng cách thêm “n” vào một chữ số nguyên.
+var bigInteger =  234567890123456789012345678901234567890;
+
+Boolean - kiểu luận lý, có hai giá trị là true và false. Thường được dùng với điều kiện.
+
+var a = 2;
+var b =  3;
+var c =  2;
+(a == b) // trả về false
+(a == c) // trả về true
+
+undefined - khi giá trị của một biến là không xác định.
+var x; // giá trị của x là undefined
+var y = undefined; // ta cũng có thể gán một biến là undefined
+
+null - biểu diễn giá trị null. Vì JavaScript là case-sensitive, null sẽ không giống với Null, NULL, hoặc bất kỳ biến thể khác.
+var z = null;
+
+Symbol - mới được giới thiệu trong ES6. Nó lưu trữ các giá trị duy nhất và ẩn danh.
+var symbol1 = Symbol('symbol');
+
+Sử dụng typeof để tìm kiểu nguyên thuỷ:
+typeof "John Doe" // Returns "string"
+typeof 3.14 // Returns "number"
+typeof true // Returns "boolean"
+typeof 234567890123456789012345678901234567890n // Returns bigint
+typeof undefined // Returns "undefined"
+typeof null // Returns "object" (đặc trưng của JavaScript)
+typeof Symbol('symbol') // Returns Symbol
+
+Trong JavaScript nếu dữ liệu không phải là kiểu nguyên thuỷ thì tất cả đều là object.
+Object dùng để lưu trữ tập hợp dữ liệu
+// Tập hợp dữ liệu dạng key-value 
+
+var obj1 = {
+   x:  43,
+   y:  "Hello world!",
+   z: function(){
+      return this.x;
+   }
+}
+      
+// Tập hợp dữ liệu dạng danh sách
+      
+var array1 = [5, "Hello", true, 4.1];  
+
